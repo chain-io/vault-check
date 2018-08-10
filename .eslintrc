@@ -1,0 +1,3 @@
+{
+  "extends": ["@chainio/eslint-config-chainio"]
+}
