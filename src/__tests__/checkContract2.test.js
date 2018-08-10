@@ -12,7 +12,7 @@ describe('checkContract2', () => {
     web3 = 'fake'
     web3Utils.getTransactionReceipt.mockImplementation(() => Promise.resolve({
       blockNumber: 123,
-      contractAddress: receipt.contract_id
+      to: receipt.contract_id
     }))
     web3Utils.getBlock.mockImplementation(() => Promise.resolve({ timestamp: 10 }))
     web3Utils.getContract2Hash.mockImplementation(() => Promise.resolve(receipt.fingerprint))

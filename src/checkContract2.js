@@ -31,7 +31,7 @@ module.exports = (web3, receipt) => {
       }
     }
 
-    if (trec.contractAddress !== contractID) {
+    if (trec.to !== contractID) {
       return {
         pass: false,
         messages: ['Smart contract address does not match transaction']
