@@ -115,7 +115,7 @@ module.exports.getContract1Hash = (web3, contractID) => {
 }
 
 module.exports.getContract2Hash = (web3, contractID, uuid) => {
-  const getBytes = (str) => `0x${str.replace(/-/g, '')}`
+  const getBytes = str => `0x${str.replace(/-/g, '')}`
 
   return new Promise((resolve, reject) => {
     const contract = web3.eth.contract(contract2ABI)

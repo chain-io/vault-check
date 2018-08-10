@@ -16,7 +16,7 @@ describe('utils', () => {
 
   beforeEach(() => {
     c1Inst = {
-      getHash: jest.fn((callback) => callback(null, 'fingerprint'))
+      getHash: jest.fn(callback => callback(null, 'fingerprint'))
     }
     c2Inst = {
       vault: jest.fn((uuid, callback) => callback(null, '0xfingerprint'))
@@ -73,7 +73,7 @@ describe('utils', () => {
       })
     })
     it('should reject on error', () => {
-      c1Inst.getHash.mockImplementation((callback) => callback('some error', null))
+      c1Inst.getHash.mockImplementation(callback => callback('some error', null))
       return expect(getContract1Hash(web3, 'cID')).rejects.toEqual('some error')
     })
   })

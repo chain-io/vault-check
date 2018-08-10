@@ -5,7 +5,7 @@ module.exports = (web3, receipt) => {
   const transactionID = receipt.transaction_hash
 
   return web3Utils.getTransactionReceipt(web3, transactionID)
-  .then((trec) => Promise.all([trec, web3Utils.getContract1Hash(web3, contractID)]))
+  .then(trec => Promise.all([trec, web3Utils.getContract1Hash(web3, contractID)]))
   .then(([trec, cHash]) => Promise.all([trec, cHash, web3Utils.getBlock(web3, trec.blockNumber)]))
   .then(([trec, cHash, block]) => {
     if (cHash !== receipt.fingerprint) {

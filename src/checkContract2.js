@@ -5,7 +5,7 @@ module.exports = (web3, receipt) => {
   const transactionID = receipt.transaction_hash
 
   return web3Utils.getTransactionReceipt(web3, transactionID)
-  .then((trec) => Promise.all([
+  .then(trec => Promise.all([
     trec,
     web3Utils.getContract2Hash(web3, contractID, receipt.attachment_uuid)
   ]))

@@ -7,7 +7,6 @@ module.exports = (localFilePath, localReceiptPath) => {
   const localFileHash = sha256(fs.readFileSync(localFilePath))
   if (localReceipt.fingerprint === localFileHash) {
     return { pass: true, messages: [] }
-  } else {
-    return { pass: false, messages: ['Local receipt did not match file fingerprint.'] }
   }
+  return { pass: false, messages: ['Local receipt did not match file fingerprint.'] }
 }
