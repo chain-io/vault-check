@@ -23,7 +23,8 @@ vaultCheck.checkFiles(ethereumServiceProvider, filePath, receiptPath)
 })
 
 # Verify a local file and receipt against each other without the blockchain
-if (vaultCheck.checkFilesLocal(filePath, receiptPath))
+const result = vaultCheck.checkFilesLocal(filePath, receiptPath)
+if (result.pass)
   console.log('it passed')
 } else {
   console.log('it failed', result.messages)
