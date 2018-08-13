@@ -1,6 +1,6 @@
 {
   "name": "vault-check",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Validation library for Vault by Chain.io",
   "main": "src/index.js",
   "repository": "https://github.com/chain-io/vault-check",
