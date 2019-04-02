@@ -30,3 +30,7 @@ if (result.pass)
   console.log('it failed', result.messages)
 }
 ```
+
+#### Infura ID
+
+`ethereumServiceProvider` is set to your Infura ID. To get your Infura ID, register at https://infura.io/
